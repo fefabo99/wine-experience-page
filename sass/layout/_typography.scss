@@ -1,0 +1,65 @@
+@use '../settings/variables';
+@use '../settings/breakpoints';
+
+@use "sass:math";
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+
+  &.centered {
+    text-align: center;
+  }
+}
+
+h1, h3 {
+  font-weight: normal;
+}
+
+h1 {
+  font-size: variables.$base-font-size * 3;
+}
+
+h2 {
+  width: 100%;
+  font-size: variables.$base-font-size * 2;
+  margin-bottom: variables.$base-line-height;
+}
+
+h3 {
+  font-size: variables.$base-font-size * 1.5;
+}
+
+h4, h5 {
+  font-size: variables.$base-font-size * 1.25;
+}
+
+h4 {
+  margin: 0 0 variables.$half-line-height 0;
+}
+
+h6 {
+  font-size: variables.$base-font-size;
+  color: var(--low-contrast-text-color);
+}
+
+p {
+  margin: 0 0 variables.$half-line-height;
+  text-align: justify;
+
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+.bold-text {
+  font-weight: bold;
+}

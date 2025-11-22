@@ -1,0 +1,9 @@
+@use '../settings/variables';
+
+section {
+  padding: variables.$base-line-height * 3 0;
+
+  &:first-of-type {
+    padding-top: variables.$base-line-height * 4;
+  }
+}

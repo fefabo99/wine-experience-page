@@ -1,0 +1,25 @@
+$base-line-height: 1.5rem;
+$half-line-height: calc(#{$base-line-height} / 2);
+$base-font-size: 1rem;
+
+$container-size: 72rem;
+
+
+$white: #ffffff;
+$black: #000000;
+$light-gray: #9b9b9b;
+$medium-dark-gray: #313130;
+$dark-gray: #121315;
+$cream: #f4f3ed;
+
+$foreground-default: $medium-dark-gray;
+$background-default: $cream;
+
+
+* {
+  --background-color: #{$background-default};
+  --alt-background-color: #{$white};
+
+  --heading-color: #{$medium-dark-gray};
+  --font-color: #{$medium-dark-gray};
+}

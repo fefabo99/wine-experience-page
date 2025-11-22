@@ -1,0 +1,6 @@
+@use '../settings/variables';
+
+@mixin outer-container($max-size: variables.$container-size) {
+  max-width: $max-size;
+  margin: 0 auto;
+}

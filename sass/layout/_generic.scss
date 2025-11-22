@@ -1,0 +1,30 @@
+@use '../settings/variables';
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html, body {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  color: var(--font-color);
+  background: var(--background-color);
+  font-family: "system-ui","Open Sans", sans-serif;
+
+  a:active {
+    text-decoration: none;
+  }
+}
+
+hr {
+  margin-top: 0;
+  margin-bottom: variables.$base-line-height;
+}

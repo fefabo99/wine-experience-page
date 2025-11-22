@@ -1,0 +1,12 @@
+@use "sass:map" as map;
+
+@use '../abstracts/abstract-container';
+@use '../settings/breakpoints';
+
+.container {
+  @extend %abstract-container;
+  
+  @media (max-width: map.get(breakpoints.$breakpoints, 'medium')) {
+    overflow-x: hidden;
+  }
+}
