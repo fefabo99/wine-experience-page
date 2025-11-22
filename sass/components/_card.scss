@@ -1,0 +1,53 @@
+@use "sass:map" as map;
+
+@use '../settings/variables';
+@use '../settings/breakpoints';
+
+.card {
+
+  background-color: variables.$white;
+
+  .card-image {
+    margin-bottom: variables.$half-line-height;
+  }
+
+  .card-title h4 {
+    text-transform: uppercase;
+
+  }
+
+  .card-content {
+    button {
+      width: 100%;
+      margin-bottom: variables.$half-line-height;
+      background: variables.$white;
+      text-align: left;
+      border: 1px solid variables.$black;
+      padding: 0.75rem;
+
+      .arrow {
+        float: right;
+      }
+    }
+
+    .price {
+      font-weight: bold;
+      p.price-title {
+        margin-bottom: 0;
+        text-transform: uppercase;
+        font-weight: 100;
+        color: gray;
+      }
+
+      span.vat-indicator {
+        font-weight: normal;
+        float: right;
+        background-color: #d9d9d9;
+        padding: 2px 5px;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+      }
+
+    }
+  }
+}
