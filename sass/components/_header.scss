@@ -31,7 +31,6 @@ header {
     }
 
     .header-container {
-      // display: flex;
       align-items: center;
 
       @media (min-width: map.get(breakpoints.$breakpoints, 'medium')) {
