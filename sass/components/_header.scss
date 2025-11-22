@@ -1,0 +1,64 @@
+@use "sass:map" as map;
+@use '../settings/breakpoints';
+
+header {
+  min-height: 3rem;
+  padding: 1rem 0;
+  box-shadow: rgb(0 0 0 / 8%) 0 0.125rem 0.25rem;
+  background: var(--alt-background-color);
+
+
+  .header-menu {
+    position: absolute;
+    height: 100vh;
+    width: 80vw;
+    top: 0;
+
+    transition: all .2s ease-in-out;
+    left: -100%;
+
+    &.open {
+      left: 0;
+    }
+
+    @media (min-width: map.get(breakpoints.$breakpoints, 'medium')) {
+      display: flex;
+      justify-content: space-between;
+      position: inherit;
+      height: auto;
+      width: auto;
+      top: initial;
+    }
+
+    .header-container {
+      // display: flex;
+      align-items: center;
+
+      @media (min-width: map.get(breakpoints.$breakpoints, 'medium')) {
+        display: flex;
+      }
+
+      >a {
+        text-transform: uppercase;
+        padding: 0 .5rem;
+        display: block;
+
+        @media (min-width: map.get(breakpoints.$breakpoints, 'medium')) {
+          display: inline;
+        }
+      }
+    }
+  }
+
+  img {
+    height: 2rem;
+
+    @media (min-width: map.get(breakpoints.$breakpoints, 'medium')) {
+      position: absolute;
+      top: .5rem;
+      left: 50vw;
+      transform: translate(-50%, 0);
+    }
+
+  }
+}
