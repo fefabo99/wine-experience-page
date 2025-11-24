@@ -9,7 +9,9 @@
   display: flex;
   flex-direction: column;
 
-  .card-title, .card-content, .card-buttons {
+  .card-title,
+  .card-content,
+  .card-buttons {
     @extend %abstract-container;
     width: 100%;
   }
@@ -20,13 +22,30 @@
     margin-bottom: variables.$half-line-height;
   }
 
-  .card-title h4 {
-    text-transform: uppercase;
+  .card-title {
+    p {
+      font-weight: lighter;
+      color: variables.$medium-dark-gray;
 
+      i {
+        color: variables.$medium-dark-gray;
+      }
+
+      i:not(:first-of-type) {
+
+        margin-left: .5rem;
+      }
+    }
+
+    h4 {
+      text-transform: uppercase;
+    }
   }
 
   .card-content {
     flex-grow: 1;
+    margin-bottom: variables.$base-line-height;
+
     .price {
       font-weight: bold;
 
@@ -59,6 +78,7 @@
       text-align: left;
       border: 1px solid variables.$black;
       padding: 0.75rem;
+      font-weight: 600;
 
       .arrow {
         float: right;

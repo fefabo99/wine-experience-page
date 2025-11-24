@@ -5,7 +5,9 @@
   --font-color: #313130;
 }
 
-.container, .card .card-title, .card .card-content, .card .card-buttons {
+.container, .card .card-title,
+.card .card-content,
+.card .card-buttons {
   max-width: 72rem;
   margin: 0 auto;
   padding-left: 1rem;
@@ -16,7 +18,9 @@
   display: flex;
   flex-direction: column;
 }
-.card .card-title, .card .card-content, .card .card-buttons {
+.card .card-title,
+.card .card-content,
+.card .card-buttons {
   width: 100%;
 }
 .card {
@@ -25,11 +29,22 @@
 .card .card-image {
   margin-bottom: calc(1.5rem / 2);
 }
+.card .card-title p {
+  font-weight: lighter;
+  color: #313130;
+}
+.card .card-title p i {
+  color: #313130;
+}
+.card .card-title p i:not(:first-of-type) {
+  margin-left: 0.5rem;
+}
 .card .card-title h4 {
   text-transform: uppercase;
 }
 .card .card-content {
   flex-grow: 1;
+  margin-bottom: 1.5rem;
 }
 .card .card-content .price {
   font-weight: bold;
@@ -56,6 +71,7 @@
   text-align: left;
   border: 1px solid #000000;
   padding: 0.75rem;
+  font-weight: 600;
 }
 .card .card-buttons a.button .arrow {
   float: right;
@@ -76,7 +92,7 @@
 @media (min-width: 42em) {
   .grid {
     grid-gap: 0.75rem;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
