@@ -1,9 +1,18 @@
 @use "sass:map" as map;
 
+@use '../abstracts/abstract-container';
+
 @use '../settings/variables';
 @use '../settings/breakpoints';
 
 .card {
+  display: flex;
+  flex-direction: column;
+
+  .card-title, .card-content, .card-buttons {
+    @extend %abstract-container;
+    width: 100%;
+  }
 
   background-color: variables.$white;
 
@@ -17,21 +26,10 @@
   }
 
   .card-content {
-    button {
-      width: 100%;
-      margin-bottom: variables.$half-line-height;
-      background: variables.$white;
-      text-align: left;
-      border: 1px solid variables.$black;
-      padding: 0.75rem;
-
-      .arrow {
-        float: right;
-      }
-    }
-
+    flex-grow: 1;
     .price {
       font-weight: bold;
+
       p.price-title {
         margin-bottom: 0;
         text-transform: uppercase;
@@ -48,6 +46,23 @@
         text-transform: uppercase;
       }
 
+    }
+  }
+
+  .card-buttons {
+
+    a.button {
+      display: block;
+      width: 100%;
+      margin-bottom: variables.$half-line-height;
+      background: variables.$white;
+      text-align: left;
+      border: 1px solid variables.$black;
+      padding: 0.75rem;
+
+      .arrow {
+        float: right;
+      }
     }
   }
 }

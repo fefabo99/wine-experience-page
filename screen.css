@@ -5,6 +5,20 @@
   --font-color: #313130;
 }
 
+.container, .card .card-title, .card .card-content, .card .card-buttons {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+.card .card-title, .card .card-content, .card .card-buttons {
+  width: 100%;
+}
 .card {
   background-color: #ffffff;
 }
@@ -14,16 +28,8 @@
 .card .card-title h4 {
   text-transform: uppercase;
 }
-.card .card-content button {
-  width: 100%;
-  margin-bottom: calc(1.5rem / 2);
-  background: #ffffff;
-  text-align: left;
-  border: 1px solid #000000;
-  padding: 0.75rem;
-}
-.card .card-content button .arrow {
-  float: right;
+.card .card-content {
+  flex-grow: 1;
 }
 .card .card-content .price {
   font-weight: bold;
@@ -42,12 +48,17 @@
   font-size: 0.75rem;
   text-transform: uppercase;
 }
-
-.container {
-  max-width: 72rem;
-  margin: 0 auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
+.card .card-buttons a.button {
+  display: block;
+  width: 100%;
+  margin-bottom: calc(1.5rem / 2);
+  background: #ffffff;
+  text-align: left;
+  border: 1px solid #000000;
+  padding: 0.75rem;
+}
+.card .card-buttons a.button .arrow {
+  float: right;
 }
 
 @media (max-width: 42em) {
