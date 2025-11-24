@@ -7,46 +7,14 @@ header {
   box-shadow: rgb(0 0 0 / 8%) 0 0.125rem 0.25rem;
   background: var(--alt-background-color);
 
-
-  .header-menu {
-    position: absolute;
-    height: 100vh;
-    width: 80vw;
-    top: 0;
-
-    transition: all .2s ease-in-out;
-    left: -100%;
-
-    &.open {
-      left: 0;
-    }
+  .container {
+    display: flex;
+    justify-content: space-between;
 
     @media (min-width: map.get(breakpoints.$breakpoints, 'medium')) {
-      display: flex;
-      justify-content: space-between;
-      position: inherit;
-      height: auto;
-      width: auto;
-      top: initial;
+      display: block;
     }
 
-    .header-container {
-      align-items: center;
-
-      @media (min-width: map.get(breakpoints.$breakpoints, 'medium')) {
-        display: flex;
-      }
-
-      >a {
-        text-transform: uppercase;
-        padding: 0 .5rem;
-        display: block;
-
-        @media (min-width: map.get(breakpoints.$breakpoints, 'medium')) {
-          display: inline;
-        }
-      }
-    }
   }
 
   img {
@@ -58,6 +26,8 @@ header {
       left: 50vw;
       transform: translate(-50%, 0);
     }
+  }
+  @media (min-width: map.get(breakpoints.$breakpoints, 'medium')) {
 
   }
 }

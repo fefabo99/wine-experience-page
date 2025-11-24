@@ -1,0 +1,74 @@
+@use "sass:map" as map;
+
+@use '../settings/variables';
+@use '../settings/breakpoints';
+
+
+.header-menu {
+    position: absolute;
+    height: 100vh;
+    width: 80vw;
+    top: 0;
+
+    transition: all .2s ease-in-out;
+    left: -100%;
+    z-index: 2;
+
+    background-color: variables.$white;
+    padding: variables.$base-line-height;
+
+    &.-open {
+        left: 0;
+    }
+
+    @media (min-width: map.get(breakpoints.$breakpoints, 'medium')) {
+        display: flex;
+        justify-content: space-between;
+        position: inherit;
+        height: auto;
+        width: auto;
+        top: initial;
+        padding: 0;
+    }
+
+    .header-container {
+        align-items: center;
+
+        @media (min-width: map.get(breakpoints.$breakpoints, 'medium')) {
+            display: flex;
+        }
+
+        >a {
+            text-transform: uppercase;
+            padding: 0 .5rem;
+            display: block;
+
+            @media (min-width: map.get(breakpoints.$breakpoints, 'medium')) {
+                display: inline;
+            }
+        }
+    }
+
+    #close-menu {
+        position: absolute;
+        font-size: 1.5rem;
+        padding: 1.5rem;
+        right: 0;
+        top: 0;
+    }
+}
+
+.curtain {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    opacity: 0;
+    z-index: -999;
+
+    &.-open {
+        opacity: 0.75;
+        z-index: 1;
+    }
+
+}

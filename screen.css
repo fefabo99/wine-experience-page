@@ -119,43 +119,13 @@ header {
   box-shadow: rgba(0, 0, 0, 0.08) 0 0.125rem 0.25rem;
   background: var(--alt-background-color);
 }
-header .header-menu {
-  position: absolute;
-  height: 100vh;
-  width: 80vw;
-  top: 0;
-  transition: all 0.2s ease-in-out;
-  left: -100%;
-}
-header .header-menu.open {
-  left: 0;
+header .container {
+  display: flex;
+  justify-content: space-between;
 }
 @media (min-width: 42em) {
-  header .header-menu {
-    display: flex;
-    justify-content: space-between;
-    position: inherit;
-    height: auto;
-    width: auto;
-    top: initial;
-  }
-}
-header .header-menu .header-container {
-  align-items: center;
-}
-@media (min-width: 42em) {
-  header .header-menu .header-container {
-    display: flex;
-  }
-}
-header .header-menu .header-container > a {
-  text-transform: uppercase;
-  padding: 0 0.5rem;
-  display: block;
-}
-@media (min-width: 42em) {
-  header .header-menu .header-container > a {
-    display: inline;
+  header .container {
+    display: block;
   }
 }
 header img {
@@ -167,6 +137,75 @@ header img {
     top: 0.5rem;
     left: 50vw;
     transform: translate(-50%, 0);
+  }
+}
+.header-menu {
+  position: absolute;
+  height: 100vh;
+  width: 80vw;
+  top: 0;
+  transition: all 0.2s ease-in-out;
+  left: -100%;
+  z-index: 2;
+  background-color: #ffffff;
+  padding: 1.5rem;
+}
+.header-menu.-open {
+  left: 0;
+}
+@media (min-width: 42em) {
+  .header-menu {
+    display: flex;
+    justify-content: space-between;
+    position: inherit;
+    height: auto;
+    width: auto;
+    top: initial;
+    padding: 0;
+  }
+}
+.header-menu .header-container {
+  align-items: center;
+}
+@media (min-width: 42em) {
+  .header-menu .header-container {
+    display: flex;
+  }
+}
+.header-menu .header-container > a {
+  text-transform: uppercase;
+  padding: 0 0.5rem;
+  display: block;
+}
+@media (min-width: 42em) {
+  .header-menu .header-container > a {
+    display: inline;
+  }
+}
+.header-menu #close-menu {
+  position: absolute;
+  font-size: 1.5rem;
+  padding: 1.5rem;
+  right: 0;
+  top: 0;
+}
+
+.curtain {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  opacity: 0;
+  z-index: -999;
+}
+.curtain.-open {
+  opacity: 0.75;
+  z-index: 1;
+}
+
+@media (min-width: 42em) {
+  .no-desktop {
+    display: none;
   }
 }
 

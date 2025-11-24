@@ -13,11 +13,12 @@
 </head>
 
 <body>
+    <div class="curtain" id="curtain"></div>
     <header>
         <div class="container">
-            <div class="header-menu">
+            <div class="header-menu" id="header-menu">
                 <div class="header-container">
-                    <a href="#">Identità</a>
+                    <a href="#">Identità <i class="fa-solid fa-angle-down"></i></a>
                     <a href="#">Vini</a>
                     <a href="#">Devin Cosmetica</a>
 
@@ -26,12 +27,15 @@
                     <a href="#">Esperienza</a>
                     <a href="#">Gift card</a>
                     <a href="#">Store Locator</a>
-                    <a href="#"><i class="fa-solid fa-globe"></i> IT</a>
+                    <a href="#"><i class="fa-solid fa-globe"></i> IT <i class="fa-solid fa-angle-down"></i></a>
                 </div>
+
+                <p id="close-menu" class="no-desktop"><i class="fa-solid fa-xmark"></i></p>
             </div>
-
+            <p id="burger" class="no-desktop">
+                <i class="fa-solid fa-bars no-desktop"></i>
+            </p>
             <img src="images/Google_2015_logo.webp" />
-
         </div>
     </header>
 
@@ -146,7 +150,8 @@
                                 medievale</p>
                             <div class="price">
                                 <p class="price-title">Prezzo</p>
-                                <p class="actual-price">A partire da €356,00<span class="vat-indicator">Iva inclusa</span>
+                                <p class="actual-price">A partire da €356,00<span class="vat-indicator">Iva
+                                        inclusa</span>
                                 </p>
                             </div>
                         </div>
@@ -162,5 +167,7 @@
     </section>
 
 </body>
+
+<script src="main.js"></script>
 
 </html>
