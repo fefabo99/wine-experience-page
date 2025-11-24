@@ -17,14 +17,30 @@
 .card {
   display: flex;
   flex-direction: column;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+@media (min-width: 42em) {
+  .card.-big {
+    flex-direction: row;
+  }
+  .card.-big .card-image {
+    flex: 0 0 67.5%;
+    margin-bottom: -0.5rem;
+  }
+  .card.-big .card-image > img {
+    object-fit: none;
+  }
+  .card.-big .big-card-container {
+    padding-top: calc(1.5rem / 2);
+    display: flex;
+    flex-direction: column;
+  }
 }
 .card .card-title,
 .card .card-content,
 .card .card-buttons {
   width: 100%;
-}
-.card {
-  background-color: #ffffff;
 }
 .card .card-image {
   margin-bottom: calc(1.5rem / 2);

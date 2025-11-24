@@ -8,6 +8,32 @@
 .card {
   display: flex;
   flex-direction: column;
+  background-color: variables.$white;
+  overflow: hidden;
+
+
+  &.-big {
+    @media (min-width: map.get(breakpoints.$breakpoints, 'medium')) {
+      flex-direction: row;
+
+      .card-image {
+        flex: 0 0 67.5%;
+        margin-bottom: -0.5rem;
+        >img {
+          object-fit: none;
+        }
+
+      }
+      .big-card-container {
+        padding: 0 .5rem;
+        padding-top: variables.$half-line-height ;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+  }
+
 
   .card-title,
   .card-content,
@@ -16,7 +42,8 @@
     width: 100%;
   }
 
-  background-color: variables.$white;
+
+
 
   .card-image {
     margin-bottom: variables.$half-line-height;
